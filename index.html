@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./pages/index.css">
+    <title>Mesto</title>
+</head>
+
+<body class="page">
+    <header class="header">
+        <img src="./images/logo_vector.svg" class="header__logo" alt="Логотип">
+    </header>
+    <main>
+        <section class="profile">
+            <div class="profile__info">
+                <img src="./images/ifKusto.jpg" class="profile__avatar" alt="изображение профиля">
+                <div class="profile__block">
+                    <div class="profile__wrapper">
+                        <h1 class="profile__name">Жак-Ив Кусто</h1>
+                        <button class="profile__edit-button" type="button"></button>
+                    </div>
+                    <p class="profile__about">Исследователь океана</p>
+                </div>
+            </div>
+            <button class="profile__add-button" type="button"></button>
+        </section>
+
+        <section class="elements">
+            <div class="element">
+                <img src="./images/indian.jpg" class="element__photo" alt="Индийский океан">
+                <div class="element__title">
+                    <h2 class="element__name">Индийский океан</h2>
+                    <button class="element__like element__like_active" type="button">лайк</button>
+                </div>
+            </div>
+            <div class="element">
+                <img src="./images/Тропики.jpg" class="element__photo" alt="Тропические Тропики">
+                <div class="element__title">
+                    <h2 class="element__name">Тропики</h2>
+                    <button class="element__like" type="button">лайк</button>
+                </div>
+            </div>
+            <div class="element">
+                <img src="./images/islands.jpg" class="element__photo" alt="Острова Палау">
+                <div class="element__title">
+                    <h2 class="element__name">Острова Палау</h2>
+                    <button class="element__like" type="button">лайк</button>
+                </div>
+            </div>
+            <div class="element">
+                <img src="./images/pit.jpg" class="element__photo" alt="Колодец Тора, штат Орегон">
+                <div class="element__title">
+                    <h2 class="element__name">Колодец Тора</h2>
+                    <button class="element__like" type="button">лайк</button>
+                </div>
+            </div>
+            <div class="element">
+                <img src="./images/vulkan-uajt-ajlend-v-tihom-okeane.jpg" class="element__photo" alt="Вулкан">
+                <div class="element__title">
+                    <h2 class="element__name">Вулкан</h2>
+                    <button class="element__like" type="button">лайк</button>
+                </div>
+            </div>
+            <div class="element">
+                <img src="./images/vid-tihogo-okeana-iz-kosmosa.jpg" class="element__photo"
+                    alt="Вид из космоса на Тихий океан">
+                <div class="element__title">
+                    <h2 class="element__name">Вид из космоса на океан</h2>
+                    <button class="element__like" type="button">лайк</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer class="footer">
+        <p class="footer__copyright">&copy; 2022. Pshenichnikov Dmitriy</p>
+    </footer>
+    <div class="popup">
+        <div class="popup__content">
+            <button type="button" class="popup__close">
+                <img src="./images/closeiconpopoup.svg" class="popup__cross" alt="кнопка закрытия формы">
+            </button>
+            <h2 class="popup__title">
+                Редактировать профиль
+            </h2>
+            <form class="popup__form" name="popupform">
+                <input type="text" class="popup__form-input popup__form-input_type_name" placeholder="Имя" name="input_name">
+                <input type="text" class="popup__form-input popup__form-input_type_about" placeholder="О себе" name="input_about">
+                <button type="submit" class="popup__save">Сохранить</button>
+            </form>
+        </div>
+    </div>
+    <script src="./scripts/index.js"></script>
+</body>
+
+</html>

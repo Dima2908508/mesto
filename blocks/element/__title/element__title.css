@@ -1,0 +1,9 @@
+.element__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+    margin-right: 15px;
+    margin-left: 21px;
+    margin-bottom: 31px;
+}

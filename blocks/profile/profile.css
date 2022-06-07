@@ -1,0 +1,28 @@
+.profile {
+   color: white;
+   max-width: 880px;
+   margin: 0 auto;
+   padding-bottom: 51px;
+   box-sizing: border-box;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+
+/* @media screen and (max-width: 580px) {
+   .profile {
+      flex-direction: column;
+      padding-bottom: 36px;
+   }
+}
+ */
+
+ @media screen and (max-width: 668px) {
+   .profile {
+      flex-direction: column;
+      padding-bottom: 36px;
+      
+   }
+}
+
