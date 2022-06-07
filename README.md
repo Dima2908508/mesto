@@ -11,3 +11,5 @@
 * БЭМ Методология разработки
 * JS classic
 
+### Линк на проект:
+https://dima2908508.github.io/mesto/index.html
