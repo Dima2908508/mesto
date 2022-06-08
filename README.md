@@ -10,6 +10,5 @@
 * CSS Grid Layout  
 * БЭМ Методология разработки
 * JS classic
-
-### Линк на проект:
+### Ссылка на проект
 https://dima2908508.github.io/mesto/index.html
