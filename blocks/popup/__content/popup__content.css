@@ -1,21 +1,11 @@
 .popup__content {
-   background-color: white;
+   min-width: 282px;
    border-radius: 10px;
    position: relative;
-   padding-top: 37px;
+   /* padding-top: 37px;
    padding-right: 36px;
    padding-left: 36px;
-   padding-bottom: 37px;
-   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
-
-}
-
-@media screen and (max-width: 580px) {
-   .popup__content {
-      max-width: 282px;
-      padding-top: 25px;
-      padding-right: 22px;
-      padding-left: 22px;
-      padding-bottom: 25px;
-   }
+   padding-bottom: 37px; */
+   /* box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+   z-index: 3;  */
 }

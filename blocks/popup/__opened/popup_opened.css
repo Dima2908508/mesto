@@ -1,4 +1,5 @@
 .popup_opened {
-   display: flex;
-   box-shadow: #ffffff;
+   /* display: flex; */
+   visibility: visible;
+   opacity: 3;
 }

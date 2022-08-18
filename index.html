@@ -29,57 +29,14 @@
         </section>
 
         <section class="elements">
-            <div class="element">
-                <img src="./images/indian.jpg" class="element__photo" alt="Индийский океан">
-                <div class="element__title">
-                    <h2 class="element__name">Индийский океан</h2>
-                    <button class="element__like element__like_active" type="button">лайк</button>
-                </div>
-            </div>
-            <div class="element">
-                <img src="./images/Тропики.jpg" class="element__photo" alt="Тропические Тропики">
-                <div class="element__title">
-                    <h2 class="element__name">Тропики</h2>
-                    <button class="element__like" type="button">лайк</button>
-                </div>
-            </div>
-            <div class="element">
-                <img src="./images/islands.jpg" class="element__photo" alt="Острова Палау">
-                <div class="element__title">
-                    <h2 class="element__name">Острова Палау</h2>
-                    <button class="element__like" type="button">лайк</button>
-                </div>
-            </div>
-            <div class="element">
-                <img src="./images/pit.jpg" class="element__photo" alt="Колодец Тора, штат Орегон">
-                <div class="element__title">
-                    <h2 class="element__name">Колодец Тора</h2>
-                    <button class="element__like" type="button">лайк</button>
-                </div>
-            </div>
-            <div class="element">
-                <img src="./images/vulkan-uajt-ajlend-v-tihom-okeane.jpg" class="element__photo" alt="Вулкан">
-                <div class="element__title">
-                    <h2 class="element__name">Вулкан</h2>
-                    <button class="element__like" type="button">лайк</button>
-                </div>
-            </div>
-            <div class="element">
-                <img src="./images/vid-tihogo-okeana-iz-kosmosa.jpg" class="element__photo"
-                    alt="Вид из космоса на Тихий океан">
-                <div class="element__title">
-                    <h2 class="element__name">Вид из космоса на океан</h2>
-                    <button class="element__like" type="button">лайк</button>
-                </div>
-            </div>
         </section>
-
     </main>
     <footer class="footer">
         <p class="footer__copyright">&copy; 2022. Pshenichnikov Dmitriy</p>
     </footer>
-    <div class="popup">
-        <div class="popup__content">
+
+    <div class="popup popup_edit-profile">
+        <div class="popup__content popup__content-edit">
             <button type="button" class="popup__close">
                 <img src="./images/closeiconpopoup.svg" class="popup__cross" alt="кнопка закрытия формы">
             </button>
@@ -93,6 +50,45 @@
             </form>
         </div>
     </div>
+
+    <div class="popup popup_new-card">
+        <div class="popup__content popup__content-add">
+            <button type="button" class="popup__close popup__close-add">
+                <img src="./images/closeiconpopoup.svg" class="popup__cross" alt="кнопка закрытия формы">
+            </button>
+            <h2 class="popup__title">Новое место</h2>
+            <form class="popup__form popup__form_new-card" name="popupform">
+                <input type="text" class="popup__form-input popup__form-input_type_title" placeholder="Название" name="Название">
+                <input type="text" class="popup__form-input popup__form-input_type_link" placeholder="Ссылка на картинку" name="ссылка на изображение">
+                <button type="submit" class="popup__save">Создать</button>
+            </form>
+
+        </div>
+
+    </div>
+
+    <div class="popup popup_full-card">
+        <figure class="popup__content popup__content-full">
+            <button type="button" class="popup__close popup__close-full">
+                <img src="./images/closeiconpopoup.svg" class="popup__cross" alt=""></button>
+                <img src="#" alt="" class="popup__image-full">
+                <figcaption class="popup__description"></figcaption>
+            </figure>
+    </div>
+
+
+    <template id="element-template">
+        <div class="element">
+          <img class="element__photo" alt="#">
+          <button type="button" class="element__delete-button"></button>
+            <div class="element__title">
+              <h2 class="element__name"></h2>
+              <button type="button" class="element__like"></button>
+            </div>
+        </div>
+       </template> 
+       
+    <script src="./scripts/cards.js"></script>
     <script src="./scripts/index.js"></script>
 </body>
 
