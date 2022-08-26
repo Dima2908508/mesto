@@ -4,8 +4,8 @@ const initialCards = [
      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
    },
    {
-     name: 'Челябинская область',
-     link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
+     name: 'Горы Кавказа',
+     link: 'https://kartinkin.net/uploads/posts/2022-02/1645443736_1-kartinkin-net-p-kartinki-krasota-prirodi-1.jpg'
    },
    {
      name: 'Иваново',
