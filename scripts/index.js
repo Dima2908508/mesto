@@ -1,48 +1,53 @@
-let popup = document.querySelector(".popup"); // Воспользуйтесь методом querySelector()
-let profileEditButton = document.querySelector('.profile__edit-button');     // кнопка редактирования профиля
-let nameOutput = document.querySelector('.profile__name');
-let aboutOutput = document.querySelector('.profile__about');
-let closePopupEditButton = document.querySelector('.popup__close');          // кнопка закрытия редактирования профиля
-let closePopupAddButton = document.querySelector('.popup__close-add');       // кнпока закрытия добавления новой карточки
+const popup = document.querySelector(".popup"); // Воспользуйтесь методом querySelector()
+const profileEditButton = document.querySelector('.profile__edit-button');     // кнопка редактирования профиля
+const nameOutput = document.querySelector('.profile__name');
+const aboutOutput = document.querySelector('.profile__about');
+const closePopupEditButton = document.querySelector('.popup__close');          // кнопка закрытия редактирования профиля
+const closePopupAddButton = document.querySelector('.popup__close-add');       // кнпока закрытия добавления новой карточки
 
-let newCardElements = document.querySelector('.elements');                   // пуской блок, место куда всталю карточку
+const newCardElements = document.querySelector('.elements');                   // пуской блок, место куда всталю карточку
 // Форма редактирования профилья  ----------------------------------------------------
-let popupForm = document.querySelector('.popup__form');
-let nameInput = popupForm.querySelector('.popup__form-input_type_name');
-let aboutInput = popupForm.querySelector('.popup__form-input_type_about');
-let popupEditProfile = document.querySelector('.popup_edit-profile');
+const popupForm = document.querySelector('.popup__form');
+const nameInput = popupForm.querySelector('.popup__form-input_type_name');
+const aboutInput = popupForm.querySelector('.popup__form-input_type_about');
+const popupEditProfile = document.querySelector('.popup_edit-profile');
 // Форма добавления новой карточки  --------------------------------------------------
-let popupNewCardForm = document.querySelector('.popup__form_new-card');
-let newCardTitle = popupNewCardForm.querySelector('.popup__form-input_type_title');
-let newCardLink = popupNewCardForm.querySelector('.popup__form-input_type_link');
+const popupNewCardForm = document.querySelector('.popup__form_new-card');
+const newCardTitle = popupNewCardForm.querySelector('.popup__form-input_type_title');
+const newCardLink = popupNewCardForm.querySelector('.popup__form-input_type_link');
 
-let popupAddCard = document.querySelector('.popup_new-card');
-let profileNewCardButton = document.querySelector('.profile__add-button');
+const popupAddCard = document.querySelector('.popup_new-card');
+const profileNewCardButton = document.querySelector('.profile__add-button');
 // Форма открытия полной карточки по клику ------------------------------------------
-let imagePopup = document.querySelector('.popup__image-full');                       //выбираем нашу картинку
-let imagePopupDescription = document.querySelector('.popup__description');           //подпись к карточки
-let popupZoomImage = document.querySelector('.popup_full-card');                     //открытие окна на полной карточке 
-let closePopupFullImage = document.querySelector('.popup__close-full');              //закрытие окна полной  картинки
+const imagePopup = document.querySelector('.popup__image-full');                       //выбираем нашу картинку
+const imagePopupDescription = document.querySelector('.popup__description');           //подпись к карточки
+const popupZoomImage = document.querySelector('.popup_full-card');                     //открытие окна на полной карточке 
+const closePopupFullImage = document.querySelector('.popup__close-full');              //закрытие окна полной  картинки
 
-let cardTemplate = document.querySelector('#element-template').content;
+const cardTemplate = document.querySelector('#element-template').content;
 
 // ф-ия сбора карточки из темплейт
 
 function createCardTemplate(name, link) {
-   let cardElement = cardTemplate.querySelector('.element').cloneNode(true);
-   cardElement.querySelector('.element__photo').src = link;
-   cardElement.querySelector('.element__photo').alt = name;
-   cardElement.querySelector('.element__name').textContent = name;
+   const cardElement = cardTemplate.querySelector('.element').cloneNode(true);
+   const cardImage = cardElement.querySelector('.element__photo');
+   const cardTitle = cardElement.querySelector('.element__name');
+   const likeButton = cardElement.querySelector('.element__like');
+   const trashButton = cardElement.querySelector('.element__delete-button');
 
-   cardElement.querySelector('.element__like').addEventListener('click', function(e) {       // переключатель лайка, как в тренажере
+   cardImage.src = link;
+   cardImage.alt = link;
+   cardTitle.textContent = name;
+
+   likeButton.addEventListener('click', function(e) {       // переключатель лайка, как в тренажере
       e.target.classList.toggle('element__like_active');
    });
 
-   cardElement.querySelector('.element__delete-button').addEventListener('click', function() {    //удаление карточки по клику на кнопке
+   trashButton.addEventListener('click', function() {    //удаление карточки по клику на кнопке
       cardElement.closest('.element').remove();
    });
 
-   cardElement.querySelector('.element__photo').addEventListener('click', function() {               //передаем данные в параметры ф-ии
+   cardImage.addEventListener('click', function() {               
       imagePopup.src = link;
       imagePopup.alt = link;
       imagePopupDescription.textContent = name;
@@ -54,7 +59,7 @@ function createCardTemplate(name, link) {
 
 
 initialCards.forEach(function(element) {
-   let cardElement = createCardTemplate(element.name, element.link);
+   const cardElement = createCardTemplate(element.name, element.link);
    createCard(cardElement);
 })
 
@@ -88,7 +93,7 @@ profileEditButton.addEventListener('click', function() {
 // Событие отправки новой карточки на страницу -------------------------------
 function formSubmitHandlerNewCard(evt) {
    evt.preventDefault();
-   let card = createCardTemplate(newCardTitle.value, newCardLink.value);
+   const card = createCardTemplate(newCardTitle.value, newCardLink.value);
    createCard(card);
    closePopup(popupAddCard);
    popupNewCardForm.reset();
